@@ -107,3 +107,18 @@ function girarHorario() {
     }
     console.log("Ângulo do avatar depois: ", anguloAvatar + "deg");
 }
+
+function girarAntihorario() {
+    console.clear();
+    console.log("Angulo do avatar antes: " , anguloAvatar + "deg");
+    if (anguloAvatar < anguloFinal) {
+        anguloAvatar -= parseInt(txtPixel.value);
+        if  (anguloAvatar > anguloFinal) {
+                anguloAvatar = anguloFinal;
+            }   
+            imgAvatar.style.transform = "rotate(" + anguloAvatar + "deg)";
+    } else {
+        console.error("Ops! Chegou ao limite e não é possivel mais gerar no sentido horario. Tente outro botão.");
+    }
+    console.log("Ângulo do avatar depois: ", anguloAvatar + "deg");
+}
